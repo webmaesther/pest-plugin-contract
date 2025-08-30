@@ -1,5 +1,5 @@
 <?php
 
-use function Webmaesther\Pest\Contracts\fulfill;
+declare(strict_types=1);
 
 fulfill('contract with dataset')->with(['value']);

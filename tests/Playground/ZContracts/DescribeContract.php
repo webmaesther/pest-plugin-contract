@@ -1,6 +1,6 @@
 <?php
 
-use function Webmaesther\Pest\Contracts\contract;
+declare(strict_types=1);
 
 contract('contract closure', function () {
 

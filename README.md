@@ -4,6 +4,10 @@ This repository contains the Pest Plugin Contracts.
 
 > If you want to start testing your application with Pest, visit the main **[Pest Repository](https://github.com/pestphp/pest)**.
 
+## Requirements
+
+- Pest v4
+
 ## Installation
 
 ```bash

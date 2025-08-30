@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Pest\\PluginName\\": "src/"
+            "Webmaesther\\Pest\\Contracts\\": "src/"
         },
         "files": [
             "src/Autoload.php"

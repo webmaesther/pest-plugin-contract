@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Pest\PluginName;
+namespace Webmaesther\Pest\Contracts;
 
 use PHPUnit\Framework\TestCase;
 

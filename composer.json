@@ -10,6 +10,14 @@
         "testing",
         "plugin"
     ],
+    "authors": [
+        {
+            "name": "Eszter Czotter",
+            "email": "eszter.czotter@gmail.com",
+            "homepage": "https://eszter.czotter.me",
+            "role": "Developer"
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.3",

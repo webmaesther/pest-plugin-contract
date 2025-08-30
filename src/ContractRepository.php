@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Webmaesther\Pest\Contracts;
+namespace Pest\Contracts;
 
 use Closure;
-use Webmaesther\Pest\Contracts\Exceptions\ContractAlreadyExists;
-use Webmaesther\Pest\Contracts\Exceptions\ContractNotFound;
+use Pest\Contracts\Exceptions\ContractAlreadyExists;
+use Pest\Contracts\Exceptions\ContractNotFound;
 
 final class ContractRepository
 {

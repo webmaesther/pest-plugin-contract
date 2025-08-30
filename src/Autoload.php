@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 use Pest\Concerns\Expectable;
+use Pest\Contracts\ContractRepository;
 use Pest\PendingCalls\DescribeCall;
 use Pest\PendingCalls\TestCall;
 use Pest\Support\HigherOrderTapProxy;
 use PHPUnit\Framework\TestCase;
-use Webmaesther\Pest\Contracts\ContractRepository;
 
 if (! function_exists('contract')) {
     /**

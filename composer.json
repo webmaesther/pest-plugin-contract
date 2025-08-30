@@ -1,6 +1,6 @@
 {
-    "name": "pestphp/pest-plugin-template",
-    "description": "My awesome plugin",
+    "name": "webmaesther/pest-plugin-contracts",
+    "description": "Pest plugin to define contract tests",
     "keywords": [
         "php",
         "framework",

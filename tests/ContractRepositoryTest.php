@@ -7,6 +7,10 @@ use Webmaesther\Pest\Contracts\Exceptions\ContractNotFound;
 use function Pest\Faker\fake;
 
 describe(ContractRepository::class, function (): void {
+    beforeEach(function () {
+        ContractRepository::clear();
+    });
+
     test('cannot be constructed', function () {
         // Act && Assert
         expect(fn () => new ContractRepository)

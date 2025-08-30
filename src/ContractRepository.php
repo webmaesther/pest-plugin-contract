@@ -10,7 +10,7 @@ use Webmaesther\Pest\Contracts\Exceptions\ContractNotFound;
 
 final class ContractRepository
 {
-    private static self $instance;
+    private static ?self $instance = null;
 
     /**
      * @var array<string,Closure>
@@ -36,5 +36,10 @@ final class ContractRepository
     public function retrieve(string $description): Closure
     {
         return $this->contracts[$description] ?? throw new ContractNotFound;
+    }
+
+    public static function clear(): void
+    {
+        self::$instance = null;
     }
 }

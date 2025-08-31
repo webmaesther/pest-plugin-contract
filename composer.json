@@ -1,5 +1,5 @@
 {
-    "name": "webmaesther/pest-plugin-contracts",
+    "name": "webmaesther/pest-plugin-contract",
     "description": "Pest plugin to define contract tests",
     "keywords": [
         "php",
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Pest\\Contracts\\": "src/"
+            "Pest\\Contract\\": "src/"
         },
         "files": [
             "src/Autoload.php"
@@ -64,7 +64,7 @@
     "extra": {
         "pest": {
             "plugins": [
-                "Pest\\Contracts\\Plugin"
+                "Pest\\Contract\\Plugin"
             ]
         }
     }

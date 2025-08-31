@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Pest\Contracts;
+namespace Pest\Contract;
 
 use Pest\Contracts\Plugins\Bootable;
 use Pest\TestSuite;

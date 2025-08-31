@@ -1,8 +1,8 @@
 <?php
 
-use Pest\Contracts\ContractRepository;
-use Pest\Contracts\Exceptions\ContractAlreadyExists;
-use Pest\Contracts\Exceptions\ContractNotFound;
+use Pest\Contract\ContractRepository;
+use Pest\Contract\Exceptions\ContractAlreadyExists;
+use Pest\Contract\Exceptions\ContractNotFound;
 
 use function Pest\Faker\fake;
 

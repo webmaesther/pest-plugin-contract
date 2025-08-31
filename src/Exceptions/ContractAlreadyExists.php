@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Pest\Contracts\Exceptions;
+namespace Pest\Contract\Exceptions;
 
 use Exception;
 

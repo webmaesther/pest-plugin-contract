@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Pest\Concerns\Expectable;
-use Pest\Contracts\ContractRepository;
+use Pest\Contract\ContractRepository;
 use Pest\PendingCalls\DescribeCall;
 use Pest\PendingCalls\TestCall;
 use Pest\Support\HigherOrderTapProxy;

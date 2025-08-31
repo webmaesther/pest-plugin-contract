@@ -1,6 +1,6 @@
-# Contracts Plugin for Pest PHP
+# Contract Plugin for Pest PHP
 
-This repository contains the Pest Plugin Contracts.
+This repository contains the Pest Plugin Contract.
 
 > If you want to start testing your application with Pest, visit the main **[Pest Repository](https://github.com/pestphp/pest)**.
 
@@ -11,7 +11,7 @@ This repository contains the Pest Plugin Contracts.
 ## Installation
 
 ```bash
-composer require webmaesther/pest-plugin-contracts --dev
+composer require webmaesther/pest-plugin-contract --dev
 ```
 
 ## Usage

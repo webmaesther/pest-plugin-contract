@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Pest\Contracts;
+namespace Pest\Contract;
 
 use Closure;
-use Pest\Contracts\Exceptions\ContractAlreadyExists;
-use Pest\Contracts\Exceptions\ContractNotFound;
+use Pest\Contract\Exceptions\ContractAlreadyExists;
+use Pest\Contract\Exceptions\ContractNotFound;
 
 final class ContractRepository
 {

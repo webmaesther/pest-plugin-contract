@@ -13,7 +13,7 @@ if (! function_exists('contract')) {
     /**
      * Registers a new contract.
      */
-    function contract(string $description, Closure $tests): void
+    function contract(string|BackedEnum $description, Closure $tests): void
     {
         ContractRepository::instance()->store($description, $tests);
     }
@@ -25,8 +25,12 @@ if (! function_exists('fulfill')) {
      *
      * @return HigherOrderTapProxy<Expectable|TestCall|TestCase>|Expectable|TestCall|TestCase|mixed
      */
-    function fulfill(string $description): DescribeCall // @phpstan-ignore-line
+    function fulfill(string|BackedEnum $description): DescribeCall // @phpstan-ignore-line
     {
+        if ($description instanceof BackedEnum) {
+            $description = (string) $description->value;
+        }
+
         return describe($description, ContractRepository::instance()->retrieve($description));
     }
 }

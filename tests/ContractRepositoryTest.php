@@ -1,8 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 use Pest\Contract\ContractRepository;
 use Pest\Contract\Exceptions\ContractAlreadyExists;
 use Pest\Contract\Exceptions\ContractNotFound;
+use Tests\Playground\Contracts\IntEnum;
+use Tests\Playground\Contracts\StringEnum;
 
 use function Pest\Faker\fake;
 
@@ -30,6 +34,18 @@ describe(ContractRepository::class, function (): void {
             ->toBeNull();
     });
 
+    test('stores string backed enum contracts', function () {
+        // Act && Assert
+        expect(ContractRepository::instance()->store(StringEnum::TEXT, function () {}))
+            ->toBeNull();
+    });
+
+    test('stores int backed enum contracts', function () {
+        // Act && Assert
+        expect(ContractRepository::instance()->store(IntEnum::NUMBER, function () {}))
+            ->toBeNull();
+    });
+
     test('retrieves a contract', function () {
         // Arrange
         $contract = function () {};
@@ -38,6 +54,24 @@ describe(ContractRepository::class, function (): void {
 
         // Act && Assert
         expect(ContractRepository::instance()->retrieve($name))->toBe($contract);
+    });
+
+    test('retrieves a string backed enum contract', function () {
+        // Arrange
+        $contract = function () {};
+        ContractRepository::instance()->store(StringEnum::TEXT, $contract);
+
+        // Act && Assert
+        expect(ContractRepository::instance()->retrieve(StringEnum::TEXT))->toBe($contract);
+    });
+
+    test('retrieves an int backed enum contract', function () {
+        // Arrange
+        $contract = function () {};
+        ContractRepository::instance()->store(IntEnum::NUMBER, $contract);
+
+        // Act && Assert
+        expect(ContractRepository::instance()->retrieve(IntEnum::NUMBER))->toBe($contract);
     });
 
     test('throws a ContractNotFound if the contract is not stored in it', function () {

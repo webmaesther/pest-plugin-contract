@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Pest\Contract;
 
+use BackedEnum;
 use Closure;
 use Pest\Contract\Exceptions\ContractAlreadyExists;
 use Pest\Contract\Exceptions\ContractNotFound;
@@ -24,8 +25,13 @@ final class ContractRepository
         return self::$instance ??= new ContractRepository;
     }
 
-    public function store(string $description, Closure $contract): void
+    public function store(string|BackedEnum $description, Closure $contract): void
     {
+        if ($description instanceof BackedEnum) {
+
+            $description = (string) $description->value;
+        }
+
         if (array_key_exists($description, $this->contracts)) {
             throw new ContractAlreadyExists;
         }
@@ -33,8 +39,12 @@ final class ContractRepository
         $this->contracts[$description] = $contract;
     }
 
-    public function retrieve(string $description): Closure
+    public function retrieve(string|BackedEnum $description): Closure
     {
+        if ($description instanceof BackedEnum) {
+            $description = $description->value;
+        }
+
         return $this->contracts[$description] ?? throw new ContractNotFound;
     }
 

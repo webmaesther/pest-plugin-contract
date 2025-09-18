@@ -32,6 +32,11 @@
             "src/Autoload.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "require-dev": {
         "pestphp/pest-dev-tools": "^4.0.0",
         "pestphp/pest-plugin-faker": "^4.0"
